@@ -1,3 +1,5 @@
+This project was made for GCC version 11.4.0 and Ubuntu 22.04 (through WSL)
+
 File and Function descriptions:
 
 1. File lexer.c : This file contains following functions
