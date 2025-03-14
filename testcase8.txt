@@ -1,0 +1,103 @@
+_multiply input parameter list[int b3, int b4]
+output parameter list [int b5];
+    b5 <--- b3*b4;
+    return [b5];
+end
+_add input parameter list[int b3, int b4]
+output parameter list [int b5];
+    b5 <--- b3+b4;
+    return [b5];
+end
+_divide input parameter list[int b3, int b4]
+output parameter list [int b5];
+    b5 <--- b3/b4;
+    return [b5];
+end
+_subtract input parameter list[int b3, int b4]
+output parameter list [int b5];
+    b5 <--- b3-b4;
+    return [b5];
+end
+
+_square input parameter list [int b3]
+output parameter list [int b4];
+    b4 <---b3*b3;
+    return [b4];
+end
+
+_percentage input parameter list [int b3, int b4]
+output parameter list [int b5];
+    b5 <--- b3*b4;
+    b5 <--- b5/100;
+    return [b5];
+end
+
+_average input parameter list [int b3, int b4, int b5, int b6]
+output parameter list [int b7];
+    b7 <--- b3 + b4;
+    b7 <--- b5 + b7;
+    b7 <--- b7 + b6;
+    b7 <--- b7/4;
+    return [b7];
+end
+
+_minmax input parameter list [int b3, int b4]
+output parameter list [int b6, int b7];
+    if (b3 > b4)
+    then
+        b7 <--- b3;
+        b6 <--- b4;
+    else 
+        b7 <--- b4;
+        b6 <--- b3;
+    endif
+    return [b6, b7];
+end
+
+_main
+    record #data
+        type real : marks;
+        type int : roll;
+    endrecord
+
+    type int : b2;
+    type int : b3;
+    type int : b4;
+    type int : b5;
+    type int : b6;
+    type int : b7;
+    read(b2);
+
+    while (b3 <= b2)
+        read(b3);
+        [b3] <--- call _multiply with parameters [b3, b2];
+    endwhile
+
+    read(b4);
+    read(b5);
+
+    [b5, b4] <--- call _minmax with parameters [b5, b4];
+
+    if(b5 < b4)
+    then
+        write(b5);
+    else 
+        read(b4);
+    endif
+
+    [b6] <--- call _average with parameters [b2, b3, b4, b5];
+    [b7] <--- call _sqaure with parameters [b6];
+
+    write(b7);
+    write(b6);
+
+    return;
+end
+_main
+    type int: b4d333;
+    type int: c3ddd34;
+    type int: c2d3;
+    type int: c2d4;
+    return;
+end
+

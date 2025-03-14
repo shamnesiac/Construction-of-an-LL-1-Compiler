@@ -1,0 +1,137 @@
+
+_unionfunction  input parameter list [record #two d5cc34, #point b5c6]  
+output parameter list[real d3];
+
+	record #two
+		type #point: beginpoint;
+		type #point: endpoint;
+	endrecord
+
+
+	type record #two : b5b567;
+	type record #one : b3;
+	type #point: d5;
+	b5b567 <--- c6*2;
+	b3 <--- c6-c3;
+	while ( b5b567 <= d5cc34)
+		read(c3bd);
+		d3 <--- d3 + c3bd;
+		b5b567 <--- b5b567 + 1;
+	endwhile
+	return [d3];
+end
+
+_parameter input parameter list [record #hehe d5cc34, real b4] output parameter list [record #what b2];
+    record #hehe 
+        type int : start;
+        type int : mend;
+        type int : mid;
+        type #what : regardless;
+    endrecord
+
+    record #bstnode 
+        type int : value;
+        type record #bstnode : left;
+        type record #bstnode : right;
+    endrecord
+    definetype record #bstnode as #bstnode
+    return;
+end
+     
+_createbstnode input parameter list [int b4] output parameter list [#bstnode b3];
+    b3.value <--- b4;
+    b3.left <--- 0;
+    b3.right <--- 0;
+    return [b3];
+end
+
+_findMinimum input parameter list [#bstnode b6bcbcbcbcbc] output parameter list [int d4dcdcdcdc65656565];
+    while (b6bcbcbcbcbc != 0)
+        b6bcbcbcbcbc <--- b6bcbcbcbcbc.left;
+    endwhile
+    return [b6bcbcbcbcbc];
+end
+
+_inOrder input parameter list [#bstnode b6bcbcbcbcbc, int d4dcdcdcdc65656565] output parameter list [int d4dcdcdcdc65656565];
+    if (b6bcbcbcbcbc == 0)
+    then
+        b3 <--- b3*(b3+b3-2.00+8449.58E85 * (4496.00E-48));
+    else
+        d4dcdcdcdc65656565 <--- d4dcdcdcdc65656565+b6bcbcbcbcbc.value;
+        [d4dcdcdcdc65656565] <--- call _inOrder with parameters [b6bcbcbcbcbc, d4dcdcdcdc65656565];
+        [d4dcdcdcdc65656565] <--- call _inOrder with parameters [b6bcbcbcbcbc, d4dcdcdcdc65656565];
+    endif
+    return [d4dcdcdcdc65656565];
+end
+    
+
+_function2 input parameter list [int b4, real b3] output parameter list [real b5];
+    type int : c2;
+    type int : c3;
+    read(c2);
+    read(c3);
+    while(c2 <= c3)
+        read(b4);
+        write(b5);
+        b3 <--- b4 + 1;
+    endwhile
+    return;
+end
+
+_functionlinkedlist input parameter list [int b4] output parameter list [record #node b2cd3];
+    type record #node : b3;
+        type record #node : b3;
+    type int : b3;
+    b2cd3 <--- b3;
+    b3 <--- 0;
+    while(b3<b4)
+        b3.next <--- b3;
+        b3 <--- b3;
+        b3 <--- b3 + 1;
+    endwhile
+    return [b2cd3];
+end
+
+
+
+% type checking will be required in stage 2. Despite some type errors, undeclared variables etc the code is syntactically correct
+%in this function.
+_main 
+	record #one
+		type real:x;
+		type real:y;
+	endrecord
+    record #node
+        type int : val;
+        type record #node : next;
+    endrecord	
+	definetype record #one as #point
+	definetype record #two as #line
+	union #four
+		type #line : ln; 
+		type #point: pt; 
+		type #traingle:tr;
+	endunion
+        definetype record #three as #triangle  
+	record #three 
+		type #line: base;
+		type #line: height;
+	endrecord
+	definetype union #four as #shape
+	record #variantrecord
+		type int: tag;
+		type #shape: s;
+	endrecord
+
+	type record #variantrecord : d4;
+	type int : b5;
+	type int : d5cb34567;
+	type record #variantrecord: b5c6;
+	b5c6 <--- b5c6.tag + d4.s.ln.beginpoint.x - b5c6.s.tr.base.beginpoint.y; 
+	b5 <--- b5 +1;
+	d4 <--- b5c6 / d5cb34567;
+	write(d4);
+	write(d4.s.ln.beginpoint.x );
+	write(b5c6.tag );
+	return;
+end 

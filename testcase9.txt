@@ -1,0 +1,86 @@
+_function1 input parameter list [int a, int b] output parameter list [int result];
+    record #person
+        type int: age;
+        type real: height;
+    endrecord
+
+    record #car
+        type int: year;
+        type int: mileage;
+    endrecord
+
+    union #animal
+        type int: legs; 
+        type int: wings;
+    endunion
+    if (a > b)
+        then
+            result <--- a - b * 2;
+        else
+            result <--- b - a * 3;
+    endif
+    return [result];
+end
+
+_function2 input parameter list [int num] output parameter list [int factorial];
+    factorial <--- 1;
+    while (num > 0)
+        factorial <--- factorial * num;
+        num <--- num - 1;
+    endwhile
+    return [factorial];
+end
+
+_main
+    type #person: john;
+    type #car: honda;
+    type #animal: bird;
+
+    type int: b4d333;
+    type int: c3ddd34;
+    type int: c2d3;
+    type int: c2d4;
+    type int: result1;
+    type int: result2;
+    type int: num;
+    type int: factorial;
+
+    john.age <--- 25;
+    john.height <--- 5.8;
+
+    honda.year <--- 2018;
+    honda.mileage <--- 30000;
+
+    bird.legs <--- 2;
+    bird.wings <--- 2;
+
+    read(b4d333);
+    read(c3ddd34);
+
+    [c2d3, c2d4] <--- call _function1 with parameters [b4d333, c3ddd34];
+    write(c2d3);
+    write(c2d4);
+
+    [result1] <--- call _function2 with parameters [c2d3];
+    write(result1);
+
+    [result2] <--- call _function1 with parameters [c2d4, result1];
+    write(result2);
+
+    read(num);
+    [factorial] <--- call _function2 with parameters [num];
+    write(factorial);
+
+    while (result2 < 100)
+    result2 <--- result2 + 10;
+    write(result2);
+    endwhile
+
+    if (c2d3 < c2d4)
+    then
+        write("c2d3 is less than c2d4");
+    else
+        write("c2d3 is greater than or equal to c2d4");
+    endif
+
+end
