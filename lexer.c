@@ -4,7 +4,7 @@
         ID : 2021B3A70981P | Name : Anirudh Anand
         ID : 2021B3A71738P | Name : Akshit Phophaliya
         ID : 2022A7PS1182P | Name : Arnav Dham
-        ID : 2022A7PS0154P | Name : Shaurya Jain
+        ID : 2022A7TS0154P | Name : Shaurya Jain
         ID : 2022A7PS0187P | Name : Darsh Rathi
 */
 #include "lexerDef.h"
@@ -16,11 +16,11 @@ char *buffer1;
 char *buffer2;
 char *lexemeStart;
 char *forward;
-Token tk;
+TK tk;
 
-#define EMP (char *)malloc(0) // check this ***SUPER IMPORTANT***
-#define MAX_STRING_SIZE 100   // Maximum length of key and value
-#define TABLE_SIZE 53         // Prime number for better distribution
+#define EMP (char *)malloc(0) 
+#define MAX_STRING_SIZE 100   
+#define TABLE_SIZE 53         
 
 // Structure for a key-value pair (node in a linked list)
 typedef struct Node
@@ -40,12 +40,11 @@ unsigned int hashFunction(char *key)
     int c;
     while ((c = *key++))
     {
-        hash = ((hash << 5) + hash) + c; // hash * 33 + c
+        hash = ((hash << 5) + hash) + c;
     }
     return hash % TABLE_SIZE;
 }
 
-// Insert key-value pair
 void insert(char *key, int value)
 {
     unsigned int index = hashFunction(key);
@@ -55,13 +54,12 @@ void insert(char *key, int value)
     {
         if (strcmp(current->key, key) == 0)
         {
-            current->value = value; // Update existing key
+            current->value = value;
             return;
         }
         current = current->next;
     }
 
-    // Insert new node
     Node *newNode = (Node *)malloc(sizeof(Node));
     strcpy(newNode->key, key);
     newNode->value = value;
@@ -81,7 +79,7 @@ int get(char *key)
             return current->value;
         current = current->next;
     }
-    return -1; // Not found
+    return -1;
 }
 
 // Delete a key from the map
@@ -141,7 +139,7 @@ void freeMap()
     }
 }
 
-// Inserts keywords into trie
+// Inserts keywords into HashMap
 void populateMap()
 {
 
@@ -175,15 +173,14 @@ void populateMap()
     insert("_main", TK_MAIN);
 }
 
-// Checks whether word is in trie
-enum Token lookupMap(char *word)
+// Checks whether word is in HashMap
+enum TK lookupMap(char *word)
 {
     return get(word);
 }
 
-//===================   CHANGE THIS      ==============================
-// Array of tokens
-char *tokensArr[] = {
+// Array of TKs
+char *TKsArr[] = {
     "TK_ERROR",
     "TK_ID",
     "TK_NUM",
@@ -244,14 +241,10 @@ char *tokensArr[] = {
     "TK_NE",
 };
 
-//===================   CHANGE THIS      ==============================
-// Removes comments from file provided
-// check return TK_comment waala portion
 FILE *removeComments(FILE *testcaseFile, FILE *cleanFile)
 {
 
     // open the file in which we supposed to write
-
     if (testcaseFile == NULL || cleanFile == NULL)
     {
         // handle error in opening of any file
@@ -278,8 +271,7 @@ FILE *removeComments(FILE *testcaseFile, FILE *cleanFile)
         }
         if (start == 1 && c == '\n')
         {
-            // if comment is in progress and we encounter endline, end the
-            // comment
+            // if comment is in progress and we encounter endline, end the comment
             start = 0;
             lineNumber++;
             fputc('\n', cleanFile);
@@ -303,7 +295,7 @@ char *extractLexeme(char *start, char *end)
     {
         if (end < start)
         {
-            printf("\033[0;31mWarning: Token exceeded buffer size, truncating lexeme.\033[0m\n");
+            printf("\033[0;31mWarning: TK exceeded buffer size, truncating lexeme.\033[0m\n");
             start = end;
             return strdup("");
         }
@@ -359,7 +351,6 @@ char *extractLexeme(char *start, char *end)
     }
 }
 
-//======== done till here =========
 // Deals with lexer errors (unknown symbol and unknown pattern)
 // when we get an error state we are calling this function
 void failState()
@@ -397,10 +388,9 @@ void failState()
 }
 
 // Returns struct encapsulating info for terminal node of parse tree
-
-returnToken ReturnTokenFactory(int t)
+returnTK returnTKFactory(int t)
 {
-    returnToken r;
+    returnTK r;
 
     if (t == -3)
     {
@@ -536,13 +526,13 @@ void incForw()
 }
 
 /*
-    This function returns the next token.
+    This function returns the next TK.
     The file pointer for the file to be read has been kept global and hence is not
     required to be passed.
 */
-returnToken getNextToken()
+returnTK getNextTK()
 {
-    returnToken r;
+    returnTK r;
     bool reloaded = false;
     while (1)
     {
@@ -576,7 +566,7 @@ returnToken getNextToken()
             else
             {
                 // terminate lexical analysis
-                r = ReturnTokenFactory(-2);
+                r = returnTKFactory(-2);
 
                 return r;
             }
@@ -684,7 +674,7 @@ returnToken getNextToken()
                         // This should give the failure state
                         // Since none of the recognizable characters are taken
                         failState();
-                        r = ReturnTokenFactory(-1);
+                        r = returnTKFactory(-1);
                         lexemeStart = forward;
                         state = 0;
                         return r;
@@ -697,7 +687,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_PLUS;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -707,7 +697,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_MUL;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -717,7 +707,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_MINUS;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -727,7 +717,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_DIV;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -737,7 +727,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_NOT;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -747,7 +737,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_OP;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -757,7 +747,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_CL;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -767,7 +757,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_SQL;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -777,7 +767,7 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_SQR;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -787,16 +777,17 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_SEM;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
                 break;
+                // case 10 ends here
             case 11:
                 // final state
                 state = 0;
                 tk = TK_COLON;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -806,16 +797,17 @@ returnToken getNextToken()
                 // final state
                 state = 0;
                 tk = TK_COMMA;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
                 break;
+                // case 12 ends here
             case 13:
                 // final state
                 state = 0;
                 tk = TK_DOT;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -830,7 +822,7 @@ returnToken getNextToken()
                 {
                     // other condition
                     failState();
-                    r = ReturnTokenFactory(-1);
+                    r = returnTKFactory(-1);
                     state = 0;
                     incrementlexemeStart(1);
                     forward = lexemeStart;
@@ -847,7 +839,7 @@ returnToken getNextToken()
                 {
                     // other condition
                     failState();
-                    r = ReturnTokenFactory(-1);
+                    r = returnTKFactory(-1);
                     state = 0;
                     incrementlexemeStart(2);
                     forward = lexemeStart;
@@ -858,7 +850,7 @@ returnToken getNextToken()
             case 16:
                 // final state
                 tk = TK_AND;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -873,7 +865,7 @@ returnToken getNextToken()
                 else
                 {
                     failState();
-                    r = ReturnTokenFactory(-1);
+                    r = returnTKFactory(-1);
                     state = 0;
                     incrementlexemeStart(1);
                     forward = lexemeStart;
@@ -889,7 +881,7 @@ returnToken getNextToken()
                 else
                 {
                     failState();
-                    r = ReturnTokenFactory(-1);
+                    r = returnTKFactory(-1);
                     state = 0;
                     incrementlexemeStart(1);
                     forward = lexemeStart;
@@ -900,7 +892,7 @@ returnToken getNextToken()
             case 19:
                 // final state
                 tk = TK_OR;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -916,7 +908,7 @@ returnToken getNextToken()
                 else
                 {
                     failState();
-                    r = ReturnTokenFactory(-1);
+                    r = returnTKFactory(-1);
                     state = 0;
                     incrementlexemeStart(1);
                     forward = lexemeStart;
@@ -939,7 +931,7 @@ returnToken getNextToken()
             case 22:
                 // final state
                 tk = TK_RUID;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -955,7 +947,7 @@ returnToken getNextToken()
                 {
                     // other condition
                     failState();
-                    r = ReturnTokenFactory(-1);
+                    r = returnTKFactory(-1);
                     state = 0;
                     incrementlexemeStart(1);
                     forward = lexemeStart;
@@ -991,17 +983,15 @@ returnToken getNextToken()
                 // case 25 ends here
             case 26:
                 // other condition
-                //================= CONFIRM FOR _MAIN  ===============
                 tk = TK_FUNID;
                 char *m = extractLexeme(lexemeStart, forward);
                 char *m2 = (char *)malloc(sizeof(char) * 5);
                 m2 = "_main";
-                // printf("%s %s %d\n",m, m2, strcmp(m,m2) );
                 if (strcmp(m, m2) == 0)
                 {
                     tk = TK_MAIN;
                 }
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1011,7 +1001,7 @@ returnToken getNextToken()
             case 27:
                 // other condition
                 tk = TK_FUNID;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1037,17 +1027,16 @@ returnToken getNextToken()
             case 29:
                 // final state
                 tk = TK_LE;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
                 return r;
-                // final state
                 break;
                 // case 29 ends here
             case 30:
                 tk = TK_LT;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1075,13 +1064,13 @@ returnToken getNextToken()
                     state = 0;
                     decForw(1);
                     lexemeStart = forward;
-                    return ReturnTokenFactory(-1);
+                    return returnTKFactory(-1);
                 }
                 break;
             case 33:
                 // final state
                 tk = TK_ASSIGNOP;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1090,7 +1079,7 @@ returnToken getNextToken()
             case 34:
                 tk = TK_LT;
                 decForw(1);
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1110,14 +1099,14 @@ returnToken getNextToken()
                 // other condition
                 state = 0;
                 tk = TK_GT;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
             case 37:
                 // final state
                 tk = TK_GE;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1135,12 +1124,12 @@ returnToken getNextToken()
                     state = 0;
                     decForw(1);
                     lexemeStart = forward;
-                    return ReturnTokenFactory(-1);
+                    return returnTKFactory(-1);
                 }
             case 39:
                 // final state
                 tk = TK_EQ;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 lexemeStart = forward;
                 return r;
@@ -1157,13 +1146,13 @@ returnToken getNextToken()
                     state = 0;
                     decForw(1);
                     lexemeStart = forward;
-                    return ReturnTokenFactory(-1);
+                    return returnTKFactory(-1);
                 }
                 // case 40 ends here
             case 41:
                 // final
                 tk = TK_NE;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 lexemeStart = forward;
                 return r;
@@ -1187,14 +1176,14 @@ returnToken getNextToken()
                 if (tk == -1)
                 {
                     tk = TK_FIELDID;
-                    r = ReturnTokenFactory(tk);
+                    r = returnTKFactory(tk);
                     decForw(1);
                     lexemeStart = forward;
                     return r;
                 }
                 else
                 {
-                    r = ReturnTokenFactory(tk);
+                    r = returnTKFactory(tk);
                     decForw(1);
                     lexemeStart = forward;
                     return r;
@@ -1251,7 +1240,7 @@ returnToken getNextToken()
             case 48:
                 // other condition
                 tk = TK_ID;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1259,7 +1248,7 @@ returnToken getNextToken()
                 break;
             case 49:
                 tk = TK_FIELDID;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1268,7 +1257,7 @@ returnToken getNextToken()
             case 50:
                 // other condition
                 tk = TK_ID;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1277,7 +1266,7 @@ returnToken getNextToken()
             case 51:
                 // other condition
                 tk = TK_ID;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1321,7 +1310,7 @@ returnToken getNextToken()
                     state = 0;
                     decForw(1);
                     lexemeStart = forward;
-                    return ReturnTokenFactory(-1);
+                    return returnTKFactory(-1);
                 }
                 break;
             case 55:
@@ -1351,7 +1340,7 @@ returnToken getNextToken()
                     state = 0;
                     decForw(1);
                     lexemeStart = forward;
-                    return ReturnTokenFactory(-1);
+                    return returnTKFactory(-1);
                 }
                 break;
             case 57:
@@ -1366,7 +1355,7 @@ returnToken getNextToken()
                     state = 0;
                     decForw(1);
                     lexemeStart = forward;
-                    return ReturnTokenFactory(-1);
+                    return returnTKFactory(-1);
                 }
                 break;
             case 58:
@@ -1381,12 +1370,12 @@ returnToken getNextToken()
                     state = 0;
                     decForw(1);
                     lexemeStart = forward;
-                    return ReturnTokenFactory(-1);
+                    return returnTKFactory(-1);
                 }
                 break;
             case 59:
                 tk = TK_RNUM;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 decForw(1);
                 state = 0;
                 lexemeStart = forward;
@@ -1394,7 +1383,7 @@ returnToken getNextToken()
                 break;
             case 60:
                 tk = TK_NUM;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1403,7 +1392,7 @@ returnToken getNextToken()
             case 61:
                 tk = TK_NUM;
                 decForw(1);
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1411,7 +1400,7 @@ returnToken getNextToken()
                 break;
             case 62:
                 tk = TK_RNUM;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 state = 0;
                 decForw(1);
                 lexemeStart = forward;
@@ -1434,7 +1423,7 @@ returnToken getNextToken()
                 break;
             case 64:
                 state = 0;
-                r = ReturnTokenFactory(-3);
+                r = returnTKFactory(-3);
                 decForw(1);
                 lexemeStart = forward;
                 return r;
@@ -1462,13 +1451,13 @@ returnToken getNextToken()
             case 67:
                 tk = TK_COMMENT;
                 state = 0;
-                r = ReturnTokenFactory(tk);
+                r = returnTKFactory(tk);
                 lineNumber++;
                 lexemeStart = forward;
                 return r;
                 break;
             default:
-                return ReturnTokenFactory(-1);
+                return returnTKFactory(-1);
                 break;
             }
         }
@@ -1476,31 +1465,29 @@ returnToken getNextToken()
 }
 
 /*
-    This function will be called to print all the tokens generated from the input source
+    This function will be called to print all the TKs generated from the input source
     file on the console
 */
-void printTokens()
+void printTKs()
 {
-
-    // printf("%-10s%-15s%s", "Line No.", "Token", "Lexeme");
     while (1)
     {
-        returnToken r = getNextToken();
+        returnTK r = getNextTK();
         if (r.flag != -2 && r.flag != -1)
         {
             if (r.flag == -3)
             {
                 continue;
             }
-            printf("\033[33m");
+            printf("\033[1;35m"); // Bold Magenta for line number
             printf("%*s", 20 - printf("Line no. %d", r.line), "");
 
-            printf("\033[35m");
+            printf("\033[1;32m"); // Bold Green for lexeme
             printf("%*s", 20 - printf("Lexeme %s", r.lexeme), "");
             printf("\033[0m");
 
-            printf("\033[36m");
-            printf("Token %s \n", tokensArr[r.t]);
+            printf("\033[1;34m"); // Light Blue for TK
+            printf("TK %s \n", TKsArr[r.t]);
         }
         if (r.flag == -2)
         {
@@ -1508,6 +1495,8 @@ void printTokens()
         }
     }
 }
+
+
 
 /**
  * The function takes the file name and internally creates a file pointer.

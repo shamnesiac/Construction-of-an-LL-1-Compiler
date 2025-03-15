@@ -4,7 +4,7 @@
         ID : 2021B3A70981P | Name : Anirudh Anand
         ID : 2021B3A71738P | Name : Akshit Phophaliya
         ID : 2022A7PS1182P | Name : Arnav Dham
-        ID : 2022A7PS0154P | Name : Shaurya Jain
+        ID : 2022A7TS0154P | Name : Shaurya Jain
         ID : 2022A7PS0187P | Name : Darsh Rathi
 */
 #ifndef PARSER_H
@@ -45,8 +45,8 @@ ProdRule LLtoProd(Elements lhs, NODE_LL rule);
 void initialiseParseTable();
 void ParseTableEntry(FIRSTANDFOLLOW F, Elements lhs, ProdRule rule);
 void createParseTable(FIRSTANDFOLLOW F);
-TREE_NODE createTreeNode(Elements x, TREE_NODE parent, returnToken *k);
-void createParseTree(Stack *st, TREE_NODE root, returnToken *flag);
+TREE_NODE createTreeNode(Elements x, TREE_NODE parent, returnTK *k);
+void createParseTree(Stack *st, TREE_NODE root, returnTK *flag);
 TREE_NODE parseInputSourceCode();
 void printParseTree(TREE_NODE root, char *outfile);
 

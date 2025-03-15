@@ -4,7 +4,7 @@
         ID : 2021B3A70981P | Name : Anirudh Anand
         ID : 2021B3A71738P | Name : Akshit Phophaliya
         ID : 2022A7PS1182P | Name : Arnav Dham
-        ID : 2022A7PS0154P | Name : Shaurya Jain
+        ID : 2022A7TS0154P | Name : Shaurya Jain
         ID : 2022A7PS0187P | Name : Darsh Rathi
 */
 #include "parserDef.h"
@@ -154,7 +154,7 @@ void syncPopulateParseTable(FIRSTANDFOLLOW Fnf)
 }
 
 // Converting Elements enum to according string
-char *tokenToString[] = {"program",
+char *TKToString[] = {"program",
                          "mainFunction",
                          "otherFunctions",
                          "function",
@@ -269,7 +269,7 @@ char *tokenToString[] = {"program",
                          "TK_DOLLAR"};
 
 // Converting Elements enum to according string
-Elements stringToToken(char *str)
+Elements stringToTK(char *str)
 {
     if (strcmp(str, "TK_ERROR") == 0)
     {
@@ -751,7 +751,7 @@ void parseFileGrammar(char *filename)
 
         char *fullLine = strtok(buff, delim2);
         char *firstptr = strtok(fullLine, delim1);
-        int LHS_NonTerm = stringToToken(firstptr);
+        int LHS_NonTerm = stringToTK(firstptr);
         firstptr = strtok(NULL, delim1);
         firstptr = strtok(NULL, delim1);
         LL_ELE curr = createNewList_Ele();
@@ -765,7 +765,7 @@ void parseFileGrammar(char *filename)
                 firstptr = strtok(NULL, delim1);
                 continue;
             }
-            NODE_ELE one = createNewNode_Ele(stringToToken(firstptr));
+            NODE_ELE one = createNewNode_Ele(stringToTK(firstptr));
             insertNode_EleLast(one, curr);
             firstptr = strtok(NULL, delim1);
         }
@@ -892,7 +892,7 @@ void computeFollow(FIRSTANDFOLLOW firstAndFollowSet)
     3. If there is a production A->aB , or a production A->aBb , where FIRST(b)
     contains eps, then everything in FOLLOW(A) is in FOLLOW(B).
     */
-    insertNode_EleLast(createNewNode_Ele(stringToToken("TK_DOLLAR")),
+    insertNode_EleLast(createNewNode_Ele(stringToTK("TK_DOLLAR")),
                        firstAndFollowSet->followSet[0]);
     int change = 1;
     while (change)
@@ -1146,7 +1146,7 @@ void createParseTable(FIRSTANDFOLLOW F)
 }
 
 // TreeNode creation and inserting nodes
-TREE_NODE createTreeNode(Elements x, TREE_NODE parent, returnToken *k)
+TREE_NODE createTreeNode(Elements x, TREE_NODE parent, returnTK *k)
 {
     TREE_NODE y = malloc(sizeof(TreeNode));
     y->value = malloc(25 * sizeof(char));
@@ -1181,29 +1181,29 @@ TREE_NODE createTreeNode(Elements x, TREE_NODE parent, returnToken *k)
 int errorred = 0;
 // Global variable, for not printing multiple redundant errors
 int redundantErrors = 0;
-void createParseTree(Stack *st, TREE_NODE root, returnToken *k)
+void createParseTree(Stack *st, TREE_NODE root, returnTK *k)
 {
     Elements a = top(st);
     while (k->flag == -3)
     {
-        *k = getNextToken();
+        *k = getNextTK();
         // root -> lexeme = k -> lexeme;
     }
-    // printf("token: %d  lexeme: %s  flag: %d root -> x: %s stack top: %s\n", k ->t, k -> lexeme, k -> flag, tokenToString[root -> x], tokenToString[a]);
+    // printf("TK: %d  lexeme: %s  flag: %d root -> x: %s stack top: %s\n", k ->t, k -> lexeme, k -> flag, TKToString[root -> x], TKToString[a]);
     while (k->t == TK_COMMENT)
     {
-        *k = getNextToken();
+        *k = getNextTK();
     }
-    // printf("token: %d  lexeme: %s  flag: %d root -> x: %s stack top: %s\n", k ->t, k -> lexeme, k -> flag, tokenToString[root -> x], tokenToString[a]);
+    // printf("TK: %d  lexeme: %s  flag: %d root -> x: %s stack top: %s\n", k ->t, k -> lexeme, k -> flag, TKToString[root -> x], TKToString[a]);
     while (k->flag == -3)
     {
-        *k = getNextToken();
+        *k = getNextTK();
     }
-    // printf("line: %d token: %d  lexeme: %s  flag: %d root -> x: %s stack top: %s\n", k->line, k->t, k->lexeme, k->flag, tokenToString[root->x], tokenToString[a]);
+    // printf("line: %d TK: %d  lexeme: %s  flag: %d root -> x: %s stack top: %s\n", k->line, k->t, k->lexeme, k->flag, TKToString[root->x], TKToString[a]);
     root->lexeme = k->lexeme;
     if (k->line >= 40 && k->line <= 46)
     {
-        // printf("line: %d token: %d  lexeme: %s  flag: %d root -> x: %s stack top: %s\n", k->line, k->t, k->lexeme, k->flag, tokenToString[root->x], tokenToString[a]);
+        // printf("line: %d TK: %d  lexeme: %s  flag: %d root -> x: %s stack top: %s\n", k->line, k->t, k->lexeme, k->flag, TKToString[root->x], TKToString[a]);
         // printf("line = %d root lexeme = %s k lexeme = %s\n", k->line, root->lexeme, k->lexeme);
     }
     if (k->flag == -1 && k->lexeme != NULL)
@@ -1221,7 +1221,7 @@ void createParseTree(Stack *st, TREE_NODE root, returnToken *k)
                 printf("\033[0;31m");
                 printf("Line %d Error :", k->line);
                 printf("\033[0;33m");
-                printf("Completed Parse Tree generation, but extra tokens were found in input file\n");
+                printf("Completed Parse Tree generation, but extra TKs were found in input file\n");
                 printf("\033[0m");
             }
             redundantErrors = 1;
@@ -1236,12 +1236,12 @@ void createParseTree(Stack *st, TREE_NODE root, returnToken *k)
             // Start of File
             if (k->lexeme == NULL)
             {
-                *k = getNextToken();
+                *k = getNextTK();
                 createParseTree(st, root, k);
                 return;
             }
             // When, Unknown pattern/Symbol is coming in input
-            *k = getNextToken();
+            *k = getNextTK();
             createParseTree(st, root, k);
             return;
         }
@@ -1310,15 +1310,15 @@ void createParseTree(Stack *st, TREE_NODE root, returnToken *k)
                 printf("\033[0;31m");
                 printf("Line %d Error :", k->line);
                 printf("\033[0;33m");
-                printf(" Invalid Token %s encountered with value %s stack top %s\n",
-                       tokenToString[k->t + NUM_NONTERMS], k->lexeme, tokenToString[a]);
+                printf(" Invalid TK %s encountered with value %s stack top %s\n",
+                       TKToString[k->t + NUM_NONTERMS], k->lexeme, TKToString[a]);
                 printf("\033[0m");
             }
 
             redundantErrors = 1;
             if (rule.count_rhs == 0)
             {
-                *k = getNextToken();
+                *k = getNextTK();
                 createParseTree(st, root, k);
                 return;
             }
@@ -1336,7 +1336,7 @@ void createParseTree(Stack *st, TREE_NODE root, returnToken *k)
         {
             // Top of stack Terminal matches Input terminal
             pop(st);
-            *k = getNextToken();
+            *k = getNextTK();
             return;
         }
         else
@@ -1349,8 +1349,8 @@ void createParseTree(Stack *st, TREE_NODE root, returnToken *k)
                 printf("\033[0;31m");
                 printf("Line %d Error :", k->line);
                 printf("\033[0;33m");
-                printf(" The token %s for lexeme %s does not match with the expected token %s\n",
-                       tokenToString[k->t + NUM_NONTERMS], k->lexeme, tokenToString[a]);
+                printf(" The TK %s for lexeme %s does not match with the expected TK %s\n",
+                       TKToString[k->t + NUM_NONTERMS], k->lexeme, TKToString[a]);
                 printf("\033[0m");
             }
             redundantErrors = 1;
@@ -1372,7 +1372,7 @@ TREE_NODE parseInputSourceCode()
     push(st, program);
     errorred = 0;
     redundantErrors = 0;
-    returnToken *r = malloc(sizeof(returnToken));
+    returnTK *r = malloc(sizeof(returnTK));
     r->t = TK_ERROR;
     r->lexeme = NULL;
     r->flag = -1;
@@ -1396,7 +1396,7 @@ void inOrderTraversal(FILE *fp, TREE_NODE root)
 {
     char *lexeme = root->lexeme;
     int lineNumber = root->lineNumber;
-    char *tokenName = tokenToString[root->x];
+    char *TKName = TKToString[root->x];
 
     char *nodeSymbol = "----";
     char *isLeafNode = "Yes";
@@ -1404,24 +1404,24 @@ void inOrderTraversal(FILE *fp, TREE_NODE root)
     char *parent = "ROOT";
 
     if (root->parent)
-        parent = tokenToString[root->parent->x];
+        parent = TKToString[root->parent->x];
 
     if (root->count_children)
     {
         lexeme = "----";
         inOrderTraversal(fp, root->children[0]);
-        tokenName = "----";
-        nodeSymbol = tokenToString[root->x];
+        TKName = "----";
+        nodeSymbol = TKToString[root->x];
         isLeafNode = "No";
     }
 
-    // lexeme CurrentNode lineno tokenName valueIfNumber parentNodeSymbol isLeafNode(yes/no) NodeSymbol
+    // lexeme CurrentNode lineno TKName valueIfNumber parentNodeSymbol isLeafNode(yes/no) NodeSymbol
     if (lineNumber != -1)
         fprintf(fp, "%-25s%-10d%-20s%-20s%-30s%-10s%-20s\n", lexeme, lineNumber,
-                tokenName, root->value, parent, isLeafNode, nodeSymbol);
+                TKName, root->value, parent, isLeafNode, nodeSymbol);
     else
         fprintf(fp, "%-25s----      %-20s%-20s%-30s%-10s%-20s\n", lexeme,
-                tokenName, root->value, parent, isLeafNode, nodeSymbol);
+                TKName, root->value, parent, isLeafNode, nodeSymbol);
 
     for (int i = 1; i < root->count_children; i++)
         inOrderTraversal(fp, root->children[i]);
@@ -1432,7 +1432,7 @@ void inOrderTraversal(FILE *fp, TREE_NODE root)
 void printParseTree(TREE_NODE root, char *outfile)
 {
     FILE *fp = fopen(outfile, "w+");
-    fprintf(fp, "Lexeme                   Line No.  Token Name          Number Value        Parent Node Symbol             is Leaf   Node Symbol\n");
+    fprintf(fp, "Lexeme                   Line No.  TK Name          Number Value        Parent Node Symbol             is Leaf   Node Symbol\n");
     inOrderTraversal(fp, root);
     fclose(fp);
     // if (errorred == 1)

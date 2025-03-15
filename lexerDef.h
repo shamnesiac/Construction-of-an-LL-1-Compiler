@@ -1,12 +1,4 @@
-/*
-    GROUP 22 :
-        ID : 2021B3A70995P | Name : Dhruv Ravi Krishnan
-        ID : 2021B3A70981P | Name : Anirudh Anand
-        ID : 2021B3A71738P | Name : Akshit Phophaliya
-        ID : 2022A7PS1182P | Name : Arnav Dham
-        ID : 2022A7PS0154P | Name : Shaurya Jain
-        ID : 2022A7PS0187P | Name : Darsh Rathi
-*/
+
 #ifndef LEXERDEF_H
 #define LEXERDEF_H
 #include <stdbool.h>
@@ -16,8 +8,8 @@
 
 #define BUFFER_SIZE 1024
 
-// rename Token to TK
-enum Token
+// rename TK to TK
+enum TK
 {
     TK_ERROR,
     TK_ID,
@@ -79,14 +71,14 @@ enum Token
     TK_NE
 };
 
-typedef enum Token Token;
-// rename to returnToken to returnTK
-struct returnToken
+typedef enum TK TK;
+
+struct returnTK
 {
-    Token t;
+    TK t;
     char *lexeme;
     int line;
     int flag;
 };
-typedef struct returnToken returnToken;
+typedef struct returnTK returnTK;
 #endif

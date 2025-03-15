@@ -1,4 +1,4 @@
-%Test Case 5: The following source code is expected to be syntactically correct as per the modified grammar.
+%Test Case 5: The following source code is expected to be syntactically correct as per the modified LL(1) grammar.
 %If any line has syntax error, please inform me as that error needs to be fixed in this test case.
 
 _unionfunction  input parameter list [record #two d5cc34, #point b5c6]  
