@@ -1,0 +1,2233 @@
+Script started on 2025-03-13 21:03:31+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="186" LINES="14"]
+[?2004h]0;shamnesiac@Bob: /mnt/c/Users/aniru/Desktop/CoCoTesting/Group_05_Compiler_Lexer_MOD[01;32mshamnesiac@Bob[00m:[01;34m/mnt/c/Users/aniru/Desktop/CoCoTesting/Group_05_Compiler_Lexer_MOD[00m$ exitmake
+[?2004lrm -f driver.o lexer.o parser.o stage1exe
+gcc-11 -Wall -Wextra -g -w -c -o driver.o driver.c
+gcc-11 -Wall -Wextra -g -w -c -o lexer.o lexer.c
+gcc-11 -Wall -Wextra -g -w -c -o parser.o parser.c
+gcc-11 -Wall -Wextra -g -w -o stage1exe driver.o lexer.o parser.o
+clear
+[H[2J[3J./stage1exe t3.txt
+[0;33mFirst and Follow Sets generated successfully
+Both Lexical and Syntax analyis modules implemented
+[0m[0;36mPlease enter your choice: [0m4
+line: 0 token: 0  lexeme: (null)  flag: -1 root -> x: program stack top: program
+63 
+
+64 
+
+65 %
+66 T
+66 e
+66 s
+66 t
+66  
+66 C
+66 a
+66 s
+66 e
+66  
+66 3
+66 :
+66  
+66 S
+66 y
+66 n
+66 t
+66 a
+66 c
+66 t
+66 i
+66 c
+66 a
+66 l
+66 l
+66 y
+66  
+66 c
+66 o
+66 r
+66 r
+66 e
+66 c
+66 t
+66  
+66 t
+66 e
+66 s
+66 t
+66 c
+66 a
+66 s
+67 e
+65 %
+66 F
+66 o
+66 l
+66 l
+66 o
+66 w
+66 i
+66 n
+66 g
+66  
+66 p
+66 r
+66 o
+66 g
+66 r
+66 a
+66 m
+66  
+66 c
+66 o
+66 m
+66 p
+66 u
+66 t
+66 e
+66 s
+66  
+66 t
+66 h
+66 e
+66  
+66 a
+66 v
+66 e
+66 r
+66 a
+66 g
+66 e
+66  
+66 m
+66 a
+66 r
+66 k
+66 s
+66  
+66 o
+66 b
+66 t
+66 a
+66 i
+66 n
+66 e
+66 d
+66  
+66 b
+66 y
+66  
+66 s
+66 t
+66 u
+66 d
+66 e
+66 n
+66 t
+66 s
+66  
+66 i
+66 n
+66  
+66 t
+66 h
+66 r
+66 e
+66 e
+66  
+66 s
+66 u
+66 b
+66 j
+66 e
+66 c
+66 t
+67 s
+63 
+
+64 
+
+65 %
+66 F
+66 o
+66 l
+66 l
+66 o
+66 w
+66 i
+66 n
+66 g
+66  
+66 f
+66 u
+66 n
+66 c
+66 t
+66 i
+66 o
+66 n
+66  
+66 r
+66 e
+66 a
+66 d
+66 s
+66  
+66 m
+66 a
+66 r
+66 k
+66 s
+66  
+66 o
+66 f
+66  
+66 a
+66  
+66 s
+66 t
+66 u
+66 d
+66 e
+66 n
+66 t
+66  
+66 i
+66 n
+66  
+66 a
+66 l
+66 l
+66  
+66 s
+66 u
+66 b
+66 j
+66 e
+66 c
+66 t
+66 s
+66  
+66 a
+66 n
+66 d
+66  
+66 r
+66 e
+66 t
+66 u
+66 r
+66 n
+66 s
+66  
+66 a
+66 s
+66  
+66 a
+66  
+66 r
+66 e
+66 c
+66 o
+66 r
+66 d
+66  
+66 v
+66 a
+66 r
+66 i
+66 a
+66 b
+66 l
+67 e
+65 %
+66  
+66 N
+66 o
+66 t
+66 e
+66  
+66 t
+66 h
+66 a
+66 t
+66  
+66 t
+66 h
+66 e
+66  
+66 v
+66 a
+66 r
+66 i
+66 a
+66 b
+66 l
+66 e
+66  
+66 b
+66 7
+66  
+66 i
+66 s
+66  
+66 n
+66 o
+66 t
+66  
+66 u
+66 s
+66 e
+66 d
+66  
+66 a
+66 n
+66 y
+66 w
+66 h
+66 e
+66 r
+66 e
+66  
+66 b
+66 u
+66 t
+66  
+66 i
+66 t
+66  
+66 i
+66 s
+66  
+66 t
+66 h
+66 e
+66  
+66 s
+66 y
+66 n
+66 t
+66 a
+66 c
+66 t
+66 i
+66 c
+66  
+66 r
+66 e
+66 q
+66 u
+66 i
+66 r
+66 e
+66 m
+66 e
+66 n
+66 t
+66  
+66 t
+66 o
+66  
+66 h
+66 a
+66 v
+66 e
+67  
+65 %
+66  
+66 a
+66 t
+66 l
+66 e
+66 a
+66 s
+66 t
+66  
+66 o
+66 n
+66 e
+66  
+66 i
+66 n
+66 p
+66 u
+66 t
+66  
+66 p
+66 a
+66 r
+66 a
+66 m
+66 e
+66 t
+66 e
+67 r
+23 _
+24 r
+24 e
+24 a
+24 d
+24 M
+24 a
+24 r
+24 k
+24 s
+26 s
+line: 8 token: 53  lexeme: _readMarks  flag: 1 root -> x: program stack top: program
+line: 8 token: 53  lexeme: _readMarks  flag: 1 root -> x: otherFunctions stack top: otherFunctions
+line: 8 token: 53  lexeme: _readMarks  flag: 1 root -> x: function stack top: function
+line: 8 token: 53  lexeme: _readMarks  flag: 1 root -> x: TK_FUNID stack top: TK_FUNID
+63  
+64  
+42 i
+42 n
+42 p
+42 u
+42 t
+43 t
+line: 8 token: 25  lexeme: input  flag: 1 root -> x: input_par stack top: input_par
+line: 8 token: 25  lexeme: input  flag: 1 root -> x: TK_INPUT stack top: TK_INPUT
+63  
+64  
+42 p
+42 a
+42 r
+42 a
+42 m
+42 e
+42 t
+42 e
+42 r
+43 r
+line: 8 token: 15  lexeme: parameter  flag: 1 root -> x: TK_PARAMETER stack top: TK_PARAMETER
+63  
+64  
+42 l
+42 i
+42 s
+42 t
+43 t
+line: 8 token: 22  lexeme: list  flag: 1 root -> x: TK_LIST stack top: TK_LIST
+8 [
+line: 8 token: 23  lexeme: [  flag: 1 root -> x: TK_SQL stack top: TK_SQL
+42 i
+42 n
+42 t
+43 t
+line: 8 token: 39  lexeme: int  flag: 1 root -> x: parameter_list stack top: parameter_list
+line: 8 token: 39  lexeme: int  flag: 1 root -> x: dataType stack top: dataType
+line: 8 token: 39  lexeme: int  flag: 1 root -> x: primitiveDatatype stack top: primitiveDatatype
+line: 8 token: 39  lexeme: int  flag: 1 root -> x: TK_INT stack top: TK_INT
+63  
+64  
+44 b
+45 7
+50 7
+line: 8 token: 1  lexeme: b7  flag: 1 root -> x: TK_ID stack top: TK_ID
+9 ]
+line: 8 token: 24  lexeme: ]  flag: 1 root -> x: remaining_list stack top: remaining_list
+line: 8 token: 24  lexeme: ]  flag: 1 root -> x: TK_EPSILON stack top: TK_SQR
+line: 8 token: 24  lexeme: ]  flag: 1 root -> x: TK_SQR stack top: TK_SQR
+63 
+
+64 
+
+42 o
+42 u
+42 t
+42 p
+42 u
+42 t
+43 t
+line: 9 token: 30  lexeme: output  flag: 1 root -> x: output_par stack top: output_par
+line: 9 token: 30  lexeme: output  flag: 1 root -> x: TK_OUTPUT stack top: TK_OUTPUT
+63  
+64  
+42 p
+42 a
+42 r
+42 a
+42 m
+42 e
+42 t
+42 e
+42 r
+43 r
+line: 9 token: 15  lexeme: parameter  flag: 1 root -> x: TK_PARAMETER stack top: TK_PARAMETER
+63  
+64  
+42 l
+42 i
+42 s
+42 t
+43 t
+line: 9 token: 22  lexeme: list  flag: 1 root -> x: TK_LIST stack top: TK_LIST
+63  
+64  
+8 [
+line: 9 token: 23  lexeme: [  flag: 1 root -> x: TK_SQL stack top: TK_SQL
+63  
+64  
+42 r
+42 e
+42 c
+42 o
+42 r
+42 d
+43 d
+line: 9 token: 19  lexeme: record  flag: 1 root -> x: parameter_list stack top: parameter_list
+line: 9 token: 19  lexeme: record  flag: 1 root -> x: dataType stack top: dataType
+line: 9 token: 19  lexeme: record  flag: 1 root -> x: constructedDatatype stack top: constructedDatatype
+line: 9 token: 19  lexeme: record  flag: 1 root -> x: TK_RECORD stack top: TK_RECORD
+63  
+64  
+20 #
+21 m
+21 a
+21 r
+21 k
+21 s
+22 s
+line: 9 token: 54  lexeme: #marks  flag: 1 root -> x: TK_RUID stack top: TK_RUID
+63  
+64  
+44 b
+45 3
+46 c
+47 4
+47 5
+48 5
+line: 9 token: 1  lexeme: b3c45  flag: 1 root -> x: TK_ID stack top: TK_ID
+9 ]
+line: 9 token: 24  lexeme: ]  flag: 1 root -> x: remaining_list stack top: remaining_list
+line: 9 token: 24  lexeme: ]  flag: 1 root -> x: TK_EPSILON stack top: TK_SQR
+line: 9 token: 24  lexeme: ]  flag: 1 root -> x: TK_SQR stack top: TK_SQR
+10 ;
+line: 9 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 r
+42 e
+42 a
+42 d
+43 d
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: stmts stack top: stmts
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: typeDefinitions stack top: typeDefinitions
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: TK_EPSILON stack top: declarations
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: declarations stack top: declarations
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: TK_EPSILON stack top: otherStmts
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: stmt stack top: stmt
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: ioStmt stack top: ioStmt
+line: 10 token: 27  lexeme: read  flag: 1 root -> x: TK_READ stack top: TK_READ
+6 (
+line: 10 token: 46  lexeme: (  flag: 1 root -> x: TK_OP stack top: TK_OP
+44 b
+45 3
+46 c
+47 4
+47 5
+48 5
+line: 10 token: 1  lexeme: b3c45  flag: 1 root -> x: var stack top: var
+line: 10 token: 1  lexeme: b3c45  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 10 token: 1  lexeme: b3c45  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 10 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 10 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 10 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+42 m
+42 a
+42 t
+42 h
+42 s
+43 s
+line: 10 token: 13  lexeme: maths  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+7 )
+line: 10 token: 47  lexeme: )  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 10 token: 47  lexeme: )  flag: 1 root -> x: TK_EPSILON stack top: TK_CL
+line: 10 token: 47  lexeme: )  flag: 1 root -> x: TK_CL stack top: TK_CL
+10 ;
+line: 10 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 r
+42 e
+42 a
+42 d
+43 d
+line: 11 token: 27  lexeme: read  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 11 token: 27  lexeme: read  flag: 1 root -> x: stmt stack top: stmt
+line: 11 token: 27  lexeme: read  flag: 1 root -> x: ioStmt stack top: ioStmt
+line: 11 token: 27  lexeme: read  flag: 1 root -> x: TK_READ stack top: TK_READ
+6 (
+line: 11 token: 46  lexeme: (  flag: 1 root -> x: TK_OP stack top: TK_OP
+44 b
+45 3
+46 c
+47 4
+47 5
+48 5
+line: 11 token: 1  lexeme: b3c45  flag: 1 root -> x: var stack top: var
+line: 11 token: 1  lexeme: b3c45  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 11 token: 1  lexeme: b3c45  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 11 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 11 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 11 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+42 p
+42 h
+42 y
+42 s
+42 i
+42 c
+42 s
+43 s
+line: 11 token: 13  lexeme: physics  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+7 )
+line: 11 token: 47  lexeme: )  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 11 token: 47  lexeme: )  flag: 1 root -> x: TK_EPSILON stack top: TK_CL
+line: 11 token: 47  lexeme: )  flag: 1 root -> x: TK_CL stack top: TK_CL
+10 ;
+line: 11 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 r
+42 e
+42 a
+42 d
+43 d
+line: 12 token: 27  lexeme: read  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 12 token: 27  lexeme: read  flag: 1 root -> x: stmt stack top: stmt
+line: 12 token: 27  lexeme: read  flag: 1 root -> x: ioStmt stack top: ioStmt
+line: 12 token: 27  lexeme: read  flag: 1 root -> x: TK_READ stack top: TK_READ
+6 (
+line: 12 token: 46  lexeme: (  flag: 1 root -> x: TK_OP stack top: TK_OP
+44 b
+45 3
+46 c
+47 4
+47 5
+48 5
+line: 12 token: 1  lexeme: b3c45  flag: 1 root -> x: var stack top: var
+line: 12 token: 1  lexeme: b3c45  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 12 token: 1  lexeme: b3c45  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 12 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 12 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 12 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+44 c
+42 h
+42 e
+42 m
+42 i
+42 s
+42 t
+42 r
+42 y
+43 y
+line: 12 token: 13  lexeme: chemistry  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+7 )
+line: 12 token: 47  lexeme: )  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 12 token: 47  lexeme: )  flag: 1 root -> x: TK_EPSILON stack top: TK_CL
+line: 12 token: 47  lexeme: )  flag: 1 root -> x: TK_CL stack top: TK_CL
+10 ;
+line: 12 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 r
+42 e
+42 t
+42 u
+42 r
+42 n
+43 n
+line: 13 token: 29  lexeme: return  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 13 token: 29  lexeme: return  flag: 1 root -> x: TK_EPSILON stack top: returnStmt
+line: 13 token: 29  lexeme: return  flag: 1 root -> x: returnStmt stack top: returnStmt
+line: 13 token: 29  lexeme: return  flag: 1 root -> x: TK_RETURN stack top: TK_RETURN
+63  
+64  
+8 [
+line: 13 token: 23  lexeme: [  flag: 1 root -> x: optionalReturn stack top: optionalReturn
+line: 13 token: 23  lexeme: [  flag: 1 root -> x: TK_SQL stack top: TK_SQL
+44 b
+44  
+42 b
+43 b
+line: 13 token: 13  lexeme: b  flag: 1 root -> x: idList stack top: idList
+[0;31mLine 13 Error :[0;33m Invalid Token TK_FIELDID encountered with value b stack top idList
+[0m52 3
+60 3
+line: 13 token: 2  lexeme: 3  flag: 1 root -> x: idList stack top: idList
+44 c
+45 4
+47 5
+48 5
+line: 13 token: 1  lexeme: c45  flag: 1 root -> x: idList stack top: idList
+line: 13 token: 1  lexeme: c45  flag: 1 root -> x: TK_ID stack top: TK_ID
+9 ]
+line: 13 token: 24  lexeme: ]  flag: 1 root -> x: more_ids stack top: more_ids
+line: 13 token: 24  lexeme: ]  flag: 1 root -> x: TK_EPSILON stack top: TK_SQR
+line: 13 token: 24  lexeme: ]  flag: 1 root -> x: TK_SQR stack top: TK_SQR
+10 ;
+line: 13 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+64 
+
+42 e
+42 n
+42 d
+43 d
+line: 14 token: 3  lexeme: end  flag: 1 root -> x: TK_END stack top: TK_END
+63 
+
+64 
+
+65 %
+66  
+66 N
+66 o
+66 t
+66 i
+66 c
+66 e
+66  
+66 h
+66 e
+66 r
+66 e
+66  
+66 t
+66 h
+66 a
+66 t
+66  
+66  
+66 y
+66 o
+66 u
+66 r
+66  
+66 c
+66 o
+66 m
+66 p
+66 i
+66 l
+66 e
+66 r
+66  
+66 r
+66 e
+66 c
+66 o
+66 g
+66 n
+66 i
+66 z
+66 e
+66 s
+66  
+66 t
+66 h
+66 e
+66  
+66 t
+66 y
+66 p
+66 e
+66  
+66 d
+66 e
+66 f
+66 i
+66 n
+66 i
+66 t
+66 i
+66 o
+66 n
+66  
+66 o
+66 f
+66  
+66 m
+66 a
+66 r
+66 k
+66 s
+66  
+66 e
+66 v
+66 e
+66 n
+66  
+66 b
+66 e
+66 f
+66 o
+66 r
+66 e
+66  
+66 i
+66 t
+66  
+66 i
+66 s
+67  
+65 %
+66  
+66 d
+66 e
+66 c
+66 l
+66 a
+66 r
+66 e
+66 d
+66 .
+66  
+66 T
+66 h
+66 i
+66 s
+66  
+66 w
+66 i
+66 l
+66 l
+66  
+66 b
+66 e
+66  
+66 h
+66 a
+66 n
+66 d
+66 l
+66 e
+66 d
+66  
+66 a
+66 t
+66  
+66 t
+66 h
+66 e
+66  
+66 s
+66 e
+66 m
+66 a
+66 n
+66 t
+66 i
+66 c
+66  
+66 a
+66 n
+66 a
+66 l
+66 y
+66 z
+66 e
+66 r
+66  
+66 p
+66 h
+66 a
+66 s
+66 e
+67 .
+63 
+
+63 
+
+64 
+
+65 %
+66 T
+66 h
+66 e
+66  
+66 f
+66 o
+66 l
+66 l
+66 o
+66 w
+66 i
+66 n
+66 g
+66  
+66 p
+66 r
+66 o
+66 g
+66 r
+66 a
+66 m
+66  
+66 c
+66 o
+66 m
+66 p
+66 u
+66 t
+66 e
+66 s
+66  
+66 t
+66 h
+66 e
+66  
+66 a
+66 v
+66 e
+66 r
+66 a
+66 g
+66 e
+66  
+66 o
+66 f
+66  
+66 m
+66 a
+66 r
+66 k
+66 s
+66  
+66 o
+66 f
+66  
+66 t
+66 o
+66 t
+66 a
+66 l
+66  
+66 d
+66 5
+66 c
+66 b
+66 3
+66 4
+66 5
+66 6
+66 7
+66  
+66  
+66 s
+66 t
+66 u
+66 d
+66 e
+66 n
+66 t
+67 s
+23 _
+24 m
+24 a
+24 i
+24 n
+26 n
+line: 20 token: 10  lexeme: _main  flag: 1 root -> x: otherFunctions stack top: otherFunctions
+line: 20 token: 10  lexeme: _main  flag: 1 root -> x: TK_EPSILON stack top: mainFunction
+line: 20 token: 10  lexeme: _main  flag: 1 root -> x: mainFunction stack top: mainFunction
+line: 20 token: 10  lexeme: _main  flag: 1 root -> x: TK_MAIN stack top: TK_MAIN
+63  
+63 
+
+63 	
+64 	
+42 r
+42 e
+42 c
+42 o
+42 r
+42 d
+43 d
+line: 21 token: 19  lexeme: record  flag: 1 root -> x: stmts stack top: stmts
+line: 21 token: 19  lexeme: record  flag: 1 root -> x: typeDefinitions stack top: typeDefinitions
+line: 21 token: 19  lexeme: record  flag: 1 root -> x: actualOrRedefined stack top: actualOrRedefined
+line: 21 token: 19  lexeme: record  flag: 1 root -> x: typeDefinition stack top: typeDefinition
+line: 21 token: 19  lexeme: record  flag: 1 root -> x: TK_RECORD stack top: TK_RECORD
+63  
+64  
+20 #
+21 m
+21 a
+21 r
+21 k
+21 s
+22 s
+line: 21 token: 54  lexeme: #marks  flag: 1 root -> x: TK_RUID stack top: TK_RUID
+63 
+
+63 	
+63 	
+64 	
+42 t
+42 y
+42 p
+42 e
+43 e
+line: 22 token: 9  lexeme: type  flag: 1 root -> x: fieldDefinitions stack top: fieldDefinitions
+line: 22 token: 9  lexeme: type  flag: 1 root -> x: fieldDefinition stack top: fieldDefinition
+line: 22 token: 9  lexeme: type  flag: 1 root -> x: TK_TYPE stack top: TK_TYPE
+63  
+64  
+42 r
+42 e
+42 a
+42 l
+43 l
+line: 22 token: 40  lexeme: real  flag: 1 root -> x: fieldType stack top: fieldType
+line: 22 token: 40  lexeme: real  flag: 1 root -> x: primitiveDatatype stack top: primitiveDatatype
+line: 22 token: 40  lexeme: real  flag: 1 root -> x: TK_REAL stack top: TK_REAL
+63  
+64  
+11 :
+line: 22 token: 43  lexeme: :  flag: 1 root -> x: TK_COLON stack top: TK_COLON
+63  
+64  
+42 m
+42 a
+42 t
+42 h
+42 s
+43 s
+line: 22 token: 13  lexeme: maths  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+10 ;
+line: 22 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63  
+63 
+
+63 	
+63 	
+64 	
+42 t
+42 y
+42 p
+42 e
+43 e
+line: 23 token: 9  lexeme: type  flag: 1 root -> x: fieldDefinition stack top: fieldDefinition
+line: 23 token: 9  lexeme: type  flag: 1 root -> x: TK_TYPE stack top: TK_TYPE
+63  
+64  
+42 r
+42 e
+42 a
+42 l
+43 l
+line: 23 token: 40  lexeme: real  flag: 1 root -> x: fieldType stack top: fieldType
+line: 23 token: 40  lexeme: real  flag: 1 root -> x: primitiveDatatype stack top: primitiveDatatype
+line: 23 token: 40  lexeme: real  flag: 1 root -> x: TK_REAL stack top: TK_REAL
+11 :
+line: 23 token: 43  lexeme: :  flag: 1 root -> x: TK_COLON stack top: TK_COLON
+63  
+64  
+42 p
+42 h
+42 y
+42 s
+42 i
+42 c
+42 s
+43 s
+line: 23 token: 13  lexeme: physics  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+10 ;
+line: 23 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63  
+63 
+
+63 	
+63 	
+64 	
+42 t
+42 y
+42 p
+42 e
+43 e
+line: 24 token: 9  lexeme: type  flag: 1 root -> x: moreFields stack top: moreFields
+line: 24 token: 9  lexeme: type  flag: 1 root -> x: fieldDefinition stack top: fieldDefinition
+line: 24 token: 9  lexeme: type  flag: 1 root -> x: TK_TYPE stack top: TK_TYPE
+63  
+64  
+42 r
+42 e
+42 a
+42 l
+43 l
+line: 24 token: 40  lexeme: real  flag: 1 root -> x: fieldType stack top: fieldType
+line: 24 token: 40  lexeme: real  flag: 1 root -> x: primitiveDatatype stack top: primitiveDatatype
+line: 24 token: 40  lexeme: real  flag: 1 root -> x: TK_REAL stack top: TK_REAL
+11 :
+line: 24 token: 43  lexeme: :  flag: 1 root -> x: TK_COLON stack top: TK_COLON
+63  
+64  
+44 c
+42 h
+42 e
+42 m
+42 i
+42 s
+42 t
+42 r
+42 y
+43 y
+line: 24 token: 13  lexeme: chemistry  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+10 ;
+line: 24 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 e
+42 n
+42 d
+42 r
+42 e
+42 c
+42 o
+42 r
+42 d
+43 d
+line: 25 token: 31  lexeme: endrecord  flag: 1 root -> x: moreFields stack top: moreFields
+line: 25 token: 31  lexeme: endrecord  flag: 1 root -> x: TK_EPSILON stack top: TK_ENDRECORD
+line: 25 token: 31  lexeme: endrecord  flag: 1 root -> x: TK_ENDRECORD stack top: TK_ENDRECORD
+63 
+
+63 	
+64 	
+65 %
+66  
+66 e
+66 a
+66 c
+66 h
+66  
+66 f
+66 i
+66 e
+66 l
+66 d
+66  
+66 a
+66 b
+66 o
+66 v
+66 e
+66  
+66 r
+66 e
+66 p
+66 r
+66 e
+66 s
+66 e
+66 n
+66 t
+66 s
+66  
+66 t
+66 h
+66 e
+66  
+66 m
+66 a
+66 r
+66 k
+66 s
+66  
+66 o
+66 b
+66 t
+66 a
+66 i
+66 n
+66 e
+66 d
+66  
+66 i
+66 n
+66  
+66 c
+66 o
+66 r
+66 r
+66 e
+66 s
+66 p
+66 o
+66 n
+66 d
+66 i
+66 n
+66 g
+66  
+66 s
+66 u
+66 b
+66 j
+66 e
+66 c
+67 t
+63 
+
+63 	
+64 	
+42 t
+42 y
+42 p
+42 e
+43 e
+line: 28 token: 9  lexeme: type  flag: 1 root -> x: typeDefinitions stack top: typeDefinitions
+line: 28 token: 9  lexeme: type  flag: 1 root -> x: TK_EPSILON stack top: declarations
+line: 28 token: 9  lexeme: type  flag: 1 root -> x: declarations stack top: declarations
+line: 28 token: 9  lexeme: type  flag: 1 root -> x: declaration stack top: declaration
+line: 28 token: 9  lexeme: type  flag: 1 root -> x: TK_TYPE stack top: TK_TYPE
+63  
+64  
+42 r
+42 e
+42 c
+42 o
+42 r
+42 d
+43 d
+line: 28 token: 19  lexeme: record  flag: 1 root -> x: dataType stack top: dataType
+line: 28 token: 19  lexeme: record  flag: 1 root -> x: constructedDatatype stack top: constructedDatatype
+line: 28 token: 19  lexeme: record  flag: 1 root -> x: TK_RECORD stack top: TK_RECORD
+63  
+64  
+20 #
+21 m
+21 a
+21 r
+21 k
+21 s
+22 s
+line: 28 token: 54  lexeme: #marks  flag: 1 root -> x: TK_RUID stack top: TK_RUID
+63  
+64  
+11 :
+line: 28 token: 43  lexeme: :  flag: 1 root -> x: TK_COLON stack top: TK_COLON
+63  
+64  
+44 d
+45 4
+50 4
+line: 28 token: 1  lexeme: d4  flag: 1 root -> x: TK_ID stack top: TK_ID
+10 ;
+line: 28 token: 42  lexeme: ;  flag: 1 root -> x: global_or_not stack top: global_or_not
+line: 28 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 28 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+65 %
+66  
+66 T
+66 h
+66 e
+66  
+66 v
+66 a
+66 r
+66 i
+66 a
+66 b
+66 l
+66 e
+66  
+66 d
+66 4
+66  
+66 s
+66 t
+66 o
+66 r
+66 e
+66 s
+66  
+66 t
+66 h
+66 e
+66  
+66 m
+66 a
+66 r
+66 k
+66 s
+66  
+66 o
+66 f
+66  
+66 o
+66 n
+66 e
+66  
+66 s
+66 t
+66 u
+66 d
+66 e
+66 n
+67 t
+63 
+
+63 	
+64 	
+42 t
+42  
+42 t
+42 y
+42 p
+42 e
+43 e
+line: 31 token: 9  lexeme: type  flag: 1 root -> x: declarations stack top: declarations
+line: 31 token: 9  lexeme: type  flag: 1 root -> x: declaration stack top: declaration
+line: 31 token: 9  lexeme: type  flag: 1 root -> x: TK_TYPE stack top: TK_TYPE
+63  
+64  
+42 i
+42 n
+42 t
+43 t
+line: 31 token: 39  lexeme: int  flag: 1 root -> x: dataType stack top: dataType
+line: 31 token: 39  lexeme: int  flag: 1 root -> x: primitiveDatatype stack top: primitiveDatatype
+line: 31 token: 39  lexeme: int  flag: 1 root -> x: TK_INT stack top: TK_INT
+63  
+64  
+11 :
+line: 31 token: 43  lexeme: :  flag: 1 root -> x: TK_COLON stack top: TK_COLON
+63  
+64  
+44 b
+45 5
+50 5
+line: 31 token: 1  lexeme: b5  flag: 1 root -> x: TK_ID stack top: TK_ID
+10 ;
+line: 31 token: 42  lexeme: ;  flag: 1 root -> x: global_or_not stack top: global_or_not
+line: 31 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 31 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 t
+42 y
+42 p
+42 e
+43 e
+line: 32 token: 9  lexeme: type  flag: 1 root -> x: declarations stack top: declarations
+line: 32 token: 9  lexeme: type  flag: 1 root -> x: declaration stack top: declaration
+line: 32 token: 9  lexeme: type  flag: 1 root -> x: TK_TYPE stack top: TK_TYPE
+63  
+64  
+42 i
+42 n
+42 t
+43 t
+line: 32 token: 39  lexeme: int  flag: 1 root -> x: dataType stack top: dataType
+line: 32 token: 39  lexeme: int  flag: 1 root -> x: primitiveDatatype stack top: primitiveDatatype
+line: 32 token: 39  lexeme: int  flag: 1 root -> x: TK_INT stack top: TK_INT
+63  
+64  
+11 :
+line: 32 token: 43  lexeme: :  flag: 1 root -> x: TK_COLON stack top: TK_COLON
+63  
+64  
+44 d
+45 5
+46 c
+46 b
+47 3
+47 4
+47 5
+47 6
+47 7
+48 7
+line: 32 token: 1  lexeme: d5cb34567  flag: 1 root -> x: TK_ID stack top: TK_ID
+10 ;
+line: 32 token: 42  lexeme: ;  flag: 1 root -> x: global_or_not stack top: global_or_not
+line: 32 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 32 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 t
+42 y
+42 p
+42 e
+43 e
+line: 33 token: 9  lexeme: type  flag: 1 root -> x: declarations stack top: declarations
+line: 33 token: 9  lexeme: type  flag: 1 root -> x: declaration stack top: declaration
+line: 33 token: 9  lexeme: type  flag: 1 root -> x: TK_TYPE stack top: TK_TYPE
+63  
+64  
+42 r
+42 e
+42 c
+42 o
+42 r
+42 d
+43 d
+line: 33 token: 19  lexeme: record  flag: 1 root -> x: dataType stack top: dataType
+line: 33 token: 19  lexeme: record  flag: 1 root -> x: constructedDatatype stack top: constructedDatatype
+line: 33 token: 19  lexeme: record  flag: 1 root -> x: TK_RECORD stack top: TK_RECORD
+63  
+64  
+20 #
+21 m
+21 a
+21 r
+21 k
+21 s
+22 s
+line: 33 token: 54  lexeme: #marks  flag: 1 root -> x: TK_RUID stack top: TK_RUID
+63  
+64  
+11 :
+line: 33 token: 43  lexeme: :  flag: 1 root -> x: TK_COLON stack top: TK_COLON
+63  
+64  
+44 b
+45 5
+46 c
+47 6
+48 6
+line: 33 token: 1  lexeme: b5c6  flag: 1 root -> x: TK_ID stack top: TK_ID
+10 ;
+line: 33 token: 42  lexeme: ;  flag: 1 root -> x: global_or_not stack top: global_or_not
+line: 33 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 33 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+65 %
+66 T
+66 h
+66 e
+66  
+66 i
+66 d
+66 e
+66 n
+66 t
+66 i
+66 f
+66 i
+66 e
+66 r
+66  
+66 b
+66 5
+66 c
+66 6
+66  
+66 s
+66 t
+66 o
+66 r
+66 e
+66 s
+66  
+66 t
+66 h
+66 e
+66  
+66 s
+66 u
+66 m
+66  
+66 o
+66 f
+66  
+66 m
+66 a
+66 r
+66 k
+67 s
+63 
+
+63 	
+64 	
+44 b
+45 5
+50 5
+line: 36 token: 1  lexeme: b5  flag: 1 root -> x: declarations stack top: declarations
+line: 36 token: 1  lexeme: b5  flag: 1 root -> x: TK_EPSILON stack top: otherStmts
+line: 36 token: 1  lexeme: b5  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 36 token: 1  lexeme: b5  flag: 1 root -> x: stmt stack top: stmt
+line: 36 token: 1  lexeme: b5  flag: 1 root -> x: assignmentStmt stack top: assignmentStmt
+line: 36 token: 1  lexeme: b5  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 36 token: 1  lexeme: b5  flag: 1 root -> x: TK_ID stack top: TK_ID
+63  
+64  
+28 <
+31 -
+32 -
+33 -
+line: 36 token: 11  lexeme: <---  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 36 token: 11  lexeme: <---  flag: 1 root -> x: TK_EPSILON stack top: TK_ASSIGNOP
+line: 36 token: 11  lexeme: <---  flag: 1 root -> x: TK_ASSIGNOP stack top: TK_ASSIGNOP
+63  
+64  
+52 1
+60 1
+line: 36 token: 2  lexeme: 1  flag: 1 root -> x: arithmeticExpression stack top: arithmeticExpression
+line: 36 token: 2  lexeme: 1  flag: 1 root -> x: term stack top: term
+line: 36 token: 2  lexeme: 1  flag: 1 root -> x: factor stack top: factor
+line: 36 token: 2  lexeme: 1  flag: 1 root -> x: var stack top: var
+line: 36 token: 2  lexeme: 1  flag: 1 root -> x: TK_NUM stack top: TK_NUM
+10 ;
+line: 36 token: 42  lexeme: ;  flag: 1 root -> x: termPrime stack top: termPrime
+line: 36 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 36 token: 42  lexeme: ;  flag: 1 root -> x: expPrime stack top: expPrime
+line: 36 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 36 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 r
+42 e
+42 a
+42 d
+43 d
+line: 37 token: 27  lexeme: read  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 37 token: 27  lexeme: read  flag: 1 root -> x: stmt stack top: stmt
+line: 37 token: 27  lexeme: read  flag: 1 root -> x: ioStmt stack top: ioStmt
+line: 37 token: 27  lexeme: read  flag: 1 root -> x: TK_READ stack top: TK_READ
+6 (
+line: 37 token: 46  lexeme: (  flag: 1 root -> x: TK_OP stack top: TK_OP
+44 d
+45 5
+46 c
+46 b
+47 3
+47 4
+47 5
+47 6
+47 7
+48 7
+line: 37 token: 1  lexeme: d5cb34567  flag: 1 root -> x: var stack top: var
+line: 37 token: 1  lexeme: d5cb34567  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 37 token: 1  lexeme: d5cb34567  flag: 1 root -> x: TK_ID stack top: TK_ID
+7 )
+line: 37 token: 47  lexeme: )  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 37 token: 47  lexeme: )  flag: 1 root -> x: TK_EPSILON stack top: TK_CL
+line: 37 token: 47  lexeme: )  flag: 1 root -> x: TK_CL stack top: TK_CL
+10 ;
+line: 37 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+44 b
+45 5
+46 c
+47 6
+48 6
+line: 38 token: 1  lexeme: b5c6  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 38 token: 1  lexeme: b5c6  flag: 1 root -> x: stmt stack top: stmt
+line: 38 token: 1  lexeme: b5c6  flag: 1 root -> x: assignmentStmt stack top: assignmentStmt
+line: 38 token: 1  lexeme: b5c6  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 38 token: 1  lexeme: b5c6  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 38 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 38 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 38 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+42 m
+42 a
+42 t
+42 h
+42 s
+43 s
+line: 38 token: 13  lexeme: maths  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+63  
+64  
+28 <
+31 -
+32 -
+33 -
+line: 38 token: 11  lexeme: <---  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 38 token: 11  lexeme: <---  flag: 1 root -> x: TK_EPSILON stack top: TK_ASSIGNOP
+line: 38 token: 11  lexeme: <---  flag: 1 root -> x: TK_ASSIGNOP stack top: TK_ASSIGNOP
+63  
+64  
+52 0
+53 .
+54 0
+55 0
+62 0
+line: 38 token: 52  lexeme: 0.00  flag: 1 root -> x: arithmeticExpression stack top: arithmeticExpression
+line: 38 token: 52  lexeme: 0.00  flag: 1 root -> x: term stack top: term
+line: 38 token: 52  lexeme: 0.00  flag: 1 root -> x: factor stack top: factor
+line: 38 token: 52  lexeme: 0.00  flag: 1 root -> x: var stack top: var
+line: 38 token: 52  lexeme: 0.00  flag: 1 root -> x: TK_RNUM stack top: TK_RNUM
+10 ;
+line: 38 token: 42  lexeme: ;  flag: 1 root -> x: termPrime stack top: termPrime
+line: 38 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 38 token: 42  lexeme: ;  flag: 1 root -> x: expPrime stack top: expPrime
+line: 38 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 38 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+44 b
+45 5
+46 c
+47 6
+48 6
+line: 39 token: 1  lexeme: b5c6  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 39 token: 1  lexeme: b5c6  flag: 1 root -> x: stmt stack top: stmt
+line: 39 token: 1  lexeme: b5c6  flag: 1 root -> x: assignmentStmt stack top: assignmentStmt
+line: 39 token: 1  lexeme: b5c6  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 39 token: 1  lexeme: b5c6  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 39 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 39 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 39 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+42 p
+42 h
+42 y
+42 s
+42 i
+42 c
+42 s
+43 s
+line: 39 token: 13  lexeme: physics  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+63  
+64  
+28 <
+31 -
+32 -
+33 -
+line: 39 token: 11  lexeme: <---  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 39 token: 11  lexeme: <---  flag: 1 root -> x: TK_EPSILON stack top: TK_ASSIGNOP
+line: 39 token: 11  lexeme: <---  flag: 1 root -> x: TK_ASSIGNOP stack top: TK_ASSIGNOP
+63  
+64  
+52 0
+53 .
+54 0
+55 0
+62 0
+line: 39 token: 52  lexeme: 0.00  flag: 1 root -> x: arithmeticExpression stack top: arithmeticExpression
+line: 39 token: 52  lexeme: 0.00  flag: 1 root -> x: term stack top: term
+line: 39 token: 52  lexeme: 0.00  flag: 1 root -> x: factor stack top: factor
+line: 39 token: 52  lexeme: 0.00  flag: 1 root -> x: var stack top: var
+line: 39 token: 52  lexeme: 0.00  flag: 1 root -> x: TK_RNUM stack top: TK_RNUM
+10 ;
+line: 39 token: 42  lexeme: ;  flag: 1 root -> x: termPrime stack top: termPrime
+line: 39 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 39 token: 42  lexeme: ;  flag: 1 root -> x: expPrime stack top: expPrime
+line: 39 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 39 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+44 b
+45 5
+46 c
+47 6
+48 6
+line: 40 token: 1  lexeme: b5c6  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 40 token: 1  lexeme: b5c6  flag: 1 root -> x: stmt stack top: stmt
+line: 40 token: 1  lexeme: b5c6  flag: 1 root -> x: assignmentStmt stack top: assignmentStmt
+line: 40 token: 1  lexeme: b5c6  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 40 token: 1  lexeme: b5c6  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 40 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 40 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 40 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+44 c
+42 h
+42 e
+42 m
+42 i
+42 s
+42 t
+42 r
+42 y
+43 y
+line: 40 token: 13  lexeme: chemistry  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+63  
+64  
+28 <
+31 -
+32 -
+33 -
+line: 40 token: 11  lexeme: <---  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 40 token: 11  lexeme: <---  flag: 1 root -> x: TK_EPSILON stack top: TK_ASSIGNOP
+line: 40 token: 11  lexeme: <---  flag: 1 root -> x: TK_ASSIGNOP stack top: TK_ASSIGNOP
+52 0
+53 .
+54 0
+55 0
+62 0
+line: 40 token: 52  lexeme: 0.00  flag: 1 root -> x: arithmeticExpression stack top: arithmeticExpression
+line: 40 token: 52  lexeme: 0.00  flag: 1 root -> x: term stack top: term
+line: 40 token: 52  lexeme: 0.00  flag: 1 root -> x: factor stack top: factor
+line: 40 token: 52  lexeme: 0.00  flag: 1 root -> x: var stack top: var
+line: 40 token: 52  lexeme: 0.00  flag: 1 root -> x: TK_RNUM stack top: TK_RNUM
+10 ;
+line: 40 token: 42  lexeme: ;  flag: 1 root -> x: termPrime stack top: termPrime
+line: 40 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 40 token: 42  lexeme: ;  flag: 1 root -> x: expPrime stack top: expPrime
+line: 40 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 40 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 w
+42 h
+42 i
+42 l
+42 e
+43 e
+line: 41 token: 4  lexeme: while  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 41 token: 4  lexeme: while  flag: 1 root -> x: stmt stack top: stmt
+line: 41 token: 4  lexeme: while  flag: 1 root -> x: iterativeStmt stack top: iterativeStmt
+line: 41 token: 4  lexeme: while  flag: 1 root -> x: TK_WHILE stack top: TK_WHILE
+6 (
+line: 41 token: 46  lexeme: (  flag: 1 root -> x: TK_OP stack top: TK_OP
+44 b
+45 5
+50 5
+line: 41 token: 1  lexeme: b5  flag: 1 root -> x: booleanExpression stack top: booleanExpression
+line: 41 token: 1  lexeme: b5  flag: 1 root -> x: var stack top: var
+line: 41 token: 1  lexeme: b5  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 41 token: 1  lexeme: b5  flag: 1 root -> x: TK_ID stack top: TK_ID
+28 <
+29 =
+line: 41 token: 37  lexeme: <=  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 41 token: 37  lexeme: <=  flag: 1 root -> x: TK_EPSILON stack top: relationalOp
+line: 41 token: 37  lexeme: <=  flag: 1 root -> x: relationalOp stack top: relationalOp
+line: 41 token: 37  lexeme: <=  flag: 1 root -> x: TK_LE stack top: TK_LE
+44 d
+45 5
+46 c
+46 b
+47 3
+47 4
+47 5
+47 6
+47 7
+48 7
+line: 41 token: 1  lexeme: d5cb34567  flag: 1 root -> x: var stack top: var
+line: 41 token: 1  lexeme: d5cb34567  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 41 token: 1  lexeme: d5cb34567  flag: 1 root -> x: TK_ID stack top: TK_ID
+7 )
+line: 41 token: 47  lexeme: )  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 41 token: 47  lexeme: )  flag: 1 root -> x: TK_EPSILON stack top: TK_CL
+line: 41 token: 47  lexeme: )  flag: 1 root -> x: TK_CL stack top: TK_CL
+63 
+
+63 	
+63 	
+64 	
+8 [
+line: 42 token: 23  lexeme: [  flag: 1 root -> x: stmt stack top: stmt
+line: 42 token: 23  lexeme: [  flag: 1 root -> x: funCallStmt stack top: funCallStmt
+line: 42 token: 23  lexeme: [  flag: 1 root -> x: outputParameters stack top: outputParameters
+line: 42 token: 23  lexeme: [  flag: 1 root -> x: TK_SQL stack top: TK_SQL
+44 d
+45 4
+50 4
+line: 42 token: 1  lexeme: d4  flag: 1 root -> x: idList stack top: idList
+line: 42 token: 1  lexeme: d4  flag: 1 root -> x: TK_ID stack top: TK_ID
+9 ]
+line: 42 token: 24  lexeme: ]  flag: 1 root -> x: more_ids stack top: more_ids
+line: 42 token: 24  lexeme: ]  flag: 1 root -> x: TK_EPSILON stack top: TK_SQR
+line: 42 token: 24  lexeme: ]  flag: 1 root -> x: TK_SQR stack top: TK_SQR
+63  
+64  
+28 <
+31 -
+32 -
+33 -
+line: 42 token: 11  lexeme: <---  flag: 1 root -> x: TK_ASSIGNOP stack top: TK_ASSIGNOP
+63  
+64  
+44 c
+42 a
+42 l
+42 l
+43 l
+line: 42 token: 18  lexeme: call  flag: 1 root -> x: TK_CALL stack top: TK_CALL
+63  
+64  
+23 _
+24 r
+24 e
+24 a
+24 d
+24 M
+24 a
+24 r
+24 k
+24 s
+26 s
+line: 42 token: 53  lexeme: _readMarks  flag: 1 root -> x: TK_FUNID stack top: TK_FUNID
+63  
+64  
+42 w
+42 i
+42 t
+42 h
+43 h
+line: 42 token: 55  lexeme: with  flag: 1 root -> x: TK_WITH stack top: TK_WITH
+63  
+64  
+42 p
+42 a
+42 r
+42 a
+42 m
+42 e
+42 t
+42 e
+42 r
+42 s
+43 s
+line: 42 token: 56  lexeme: parameters  flag: 1 root -> x: TK_PARAMETERS stack top: TK_PARAMETERS
+63  
+64  
+8 [
+line: 42 token: 23  lexeme: [  flag: 1 root -> x: inputParameters stack top: inputParameters
+line: 42 token: 23  lexeme: [  flag: 1 root -> x: TK_SQL stack top: TK_SQL
+44 b
+45 5
+50 5
+line: 42 token: 1  lexeme: b5  flag: 1 root -> x: idList stack top: idList
+line: 42 token: 1  lexeme: b5  flag: 1 root -> x: TK_ID stack top: TK_ID
+9 ]
+line: 42 token: 24  lexeme: ]  flag: 1 root -> x: more_ids stack top: more_ids
+line: 42 token: 24  lexeme: ]  flag: 1 root -> x: TK_EPSILON stack top: TK_SQR
+line: 42 token: 24  lexeme: ]  flag: 1 root -> x: TK_SQR stack top: TK_SQR
+10 ;
+line: 42 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+63 	
+64 	
+44 b
+45 5
+46 c
+47 6
+48 6
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: stmt stack top: stmt
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: assignmentStmt stack top: assignmentStmt
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: TK_ID stack top: TK_ID
+63  
+64  
+28 <
+31 -
+32 -
+33 -
+line: 43 token: 11  lexeme: <---  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 43 token: 11  lexeme: <---  flag: 1 root -> x: TK_EPSILON stack top: TK_ASSIGNOP
+line: 43 token: 11  lexeme: <---  flag: 1 root -> x: TK_ASSIGNOP stack top: TK_ASSIGNOP
+63  
+64  
+44 b
+45 5
+46 c
+47 6
+48 6
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: arithmeticExpression stack top: arithmeticExpression
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: term stack top: term
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: factor stack top: factor
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: var stack top: var
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 43 token: 1  lexeme: b5c6  flag: 1 root -> x: TK_ID stack top: TK_ID
+63  
+64  
+1 +
+line: 43 token: 50  lexeme: +  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 43 token: 50  lexeme: +  flag: 1 root -> x: TK_EPSILON stack top: termPrime
+line: 43 token: 50  lexeme: +  flag: 1 root -> x: termPrime stack top: termPrime
+line: 43 token: 50  lexeme: +  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 43 token: 50  lexeme: +  flag: 1 root -> x: expPrime stack top: expPrime
+line: 43 token: 50  lexeme: +  flag: 1 root -> x: lowPrecedenceOperators stack top: lowPrecedenceOperators
+line: 43 token: 50  lexeme: +  flag: 1 root -> x: TK_PLUS stack top: TK_PLUS
+63  
+64  
+44 d
+45 4
+50 4
+line: 43 token: 1  lexeme: d4  flag: 1 root -> x: term stack top: term
+line: 43 token: 1  lexeme: d4  flag: 1 root -> x: factor stack top: factor
+line: 43 token: 1  lexeme: d4  flag: 1 root -> x: var stack top: var
+line: 43 token: 1  lexeme: d4  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 43 token: 1  lexeme: d4  flag: 1 root -> x: TK_ID stack top: TK_ID
+10 ;
+line: 43 token: 42  lexeme: ;  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 43 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: termPrime
+line: 43 token: 42  lexeme: ;  flag: 1 root -> x: termPrime stack top: termPrime
+line: 43 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 43 token: 42  lexeme: ;  flag: 1 root -> x: expPrime stack top: expPrime
+line: 43 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 43 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63  
+63 
+
+63 	
+63 	
+64 	
+65 %
+66  
+66 a
+66 b
+66 o
+66 v
+66 e
+66  
+66 d
+66 i
+66 s
+66 p
+66 l
+66 a
+66 y
+66 s
+66  
+66 t
+66 h
+66 e
+66  
+66 s
+66 u
+66 m
+66  
+66 o
+66 f
+66  
+66 r
+66 e
+66 c
+66 o
+66 r
+66 d
+67 s
+63 	
+63 	
+64 	
+44 b
+45 5
+50 5
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: stmt stack top: stmt
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: assignmentStmt stack top: assignmentStmt
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: TK_ID stack top: TK_ID
+63  
+64  
+28 <
+31 -
+32 -
+33 -
+line: 45 token: 11  lexeme: <---  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 45 token: 11  lexeme: <---  flag: 1 root -> x: TK_EPSILON stack top: TK_ASSIGNOP
+line: 45 token: 11  lexeme: <---  flag: 1 root -> x: TK_ASSIGNOP stack top: TK_ASSIGNOP
+63  
+64  
+44 b
+45 5
+50 5
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: arithmeticExpression stack top: arithmeticExpression
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: term stack top: term
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: factor stack top: factor
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: var stack top: var
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 45 token: 1  lexeme: b5  flag: 1 root -> x: TK_ID stack top: TK_ID
+63  
+64  
+1 +
+line: 45 token: 50  lexeme: +  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 45 token: 50  lexeme: +  flag: 1 root -> x: TK_EPSILON stack top: termPrime
+line: 45 token: 50  lexeme: +  flag: 1 root -> x: termPrime stack top: termPrime
+line: 45 token: 50  lexeme: +  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 45 token: 50  lexeme: +  flag: 1 root -> x: expPrime stack top: expPrime
+line: 45 token: 50  lexeme: +  flag: 1 root -> x: lowPrecedenceOperators stack top: lowPrecedenceOperators
+line: 45 token: 50  lexeme: +  flag: 1 root -> x: TK_PLUS stack top: TK_PLUS
+52 1
+60 1
+line: 45 token: 2  lexeme: 1  flag: 1 root -> x: term stack top: term
+line: 45 token: 2  lexeme: 1  flag: 1 root -> x: factor stack top: factor
+line: 45 token: 2  lexeme: 1  flag: 1 root -> x: var stack top: var
+line: 45 token: 2  lexeme: 1  flag: 1 root -> x: TK_NUM stack top: TK_NUM
+10 ;
+line: 45 token: 42  lexeme: ;  flag: 1 root -> x: termPrime stack top: termPrime
+line: 45 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 45 token: 42  lexeme: ;  flag: 1 root -> x: expPrime stack top: expPrime
+line: 45 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 45 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 e
+42 n
+42 d
+42 w
+42 h
+42 i
+42 l
+42 e
+43 e
+line: 46 token: 45  lexeme: endwhile  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 46 token: 45  lexeme: endwhile  flag: 1 root -> x: TK_EPSILON stack top: TK_ENDWHILE
+line: 46 token: 45  lexeme: endwhile  flag: 1 root -> x: TK_ENDWHILE stack top: TK_ENDWHILE
+63 
+
+63 	
+64 	
+44 d
+45 4
+50 4
+line: 47 token: 1  lexeme: d4  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 47 token: 1  lexeme: d4  flag: 1 root -> x: stmt stack top: stmt
+line: 47 token: 1  lexeme: d4  flag: 1 root -> x: assignmentStmt stack top: assignmentStmt
+line: 47 token: 1  lexeme: d4  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 47 token: 1  lexeme: d4  flag: 1 root -> x: TK_ID stack top: TK_ID
+63  
+64  
+28 <
+31 -
+32 -
+33 -
+line: 47 token: 11  lexeme: <---  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 47 token: 11  lexeme: <---  flag: 1 root -> x: TK_EPSILON stack top: TK_ASSIGNOP
+line: 47 token: 11  lexeme: <---  flag: 1 root -> x: TK_ASSIGNOP stack top: TK_ASSIGNOP
+63  
+64  
+44 b
+45 5
+46 c
+47 6
+48 6
+line: 47 token: 1  lexeme: b5c6  flag: 1 root -> x: arithmeticExpression stack top: arithmeticExpression
+line: 47 token: 1  lexeme: b5c6  flag: 1 root -> x: term stack top: term
+line: 47 token: 1  lexeme: b5c6  flag: 1 root -> x: factor stack top: factor
+line: 47 token: 1  lexeme: b5c6  flag: 1 root -> x: var stack top: var
+line: 47 token: 1  lexeme: b5c6  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 47 token: 1  lexeme: b5c6  flag: 1 root -> x: TK_ID stack top: TK_ID
+63  
+64  
+4 /
+line: 47 token: 17  lexeme: /  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 47 token: 17  lexeme: /  flag: 1 root -> x: TK_EPSILON stack top: termPrime
+line: 47 token: 17  lexeme: /  flag: 1 root -> x: termPrime stack top: termPrime
+line: 47 token: 17  lexeme: /  flag: 1 root -> x: highPrecedenceOperator stack top: highPrecedenceOperator
+line: 47 token: 17  lexeme: /  flag: 1 root -> x: TK_DIV stack top: TK_DIV
+63  
+64  
+44 d
+45 5
+46 c
+46 b
+47 3
+47 4
+47 5
+47 6
+47 7
+48 7
+line: 47 token: 1  lexeme: d5cb34567  flag: 1 root -> x: factor stack top: factor
+line: 47 token: 1  lexeme: d5cb34567  flag: 1 root -> x: var stack top: var
+line: 47 token: 1  lexeme: d5cb34567  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 47 token: 1  lexeme: d5cb34567  flag: 1 root -> x: TK_ID stack top: TK_ID
+10 ;
+line: 47 token: 42  lexeme: ;  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 47 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: termPrime
+line: 47 token: 42  lexeme: ;  flag: 1 root -> x: termPrime stack top: termPrime
+line: 47 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: expPrime
+line: 47 token: 42  lexeme: ;  flag: 1 root -> x: expPrime stack top: expPrime
+line: 47 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 47 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 w
+42 r
+42 i
+42 t
+42 e
+43 e
+line: 48 token: 28  lexeme: write  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 48 token: 28  lexeme: write  flag: 1 root -> x: stmt stack top: stmt
+line: 48 token: 28  lexeme: write  flag: 1 root -> x: ioStmt stack top: ioStmt
+line: 48 token: 28  lexeme: write  flag: 1 root -> x: TK_WRITE stack top: TK_WRITE
+6 (
+line: 48 token: 46  lexeme: (  flag: 1 root -> x: TK_OP stack top: TK_OP
+44 d
+45 4
+50 4
+line: 48 token: 1  lexeme: d4  flag: 1 root -> x: var stack top: var
+line: 48 token: 1  lexeme: d4  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 48 token: 1  lexeme: d4  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 48 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 48 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 48 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+42 m
+42 a
+42 t
+42 h
+42 s
+43 s
+line: 48 token: 13  lexeme: maths  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+7 )
+line: 48 token: 47  lexeme: )  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 48 token: 47  lexeme: )  flag: 1 root -> x: TK_EPSILON stack top: TK_CL
+line: 48 token: 47  lexeme: )  flag: 1 root -> x: TK_CL stack top: TK_CL
+10 ;
+line: 48 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 w
+42 r
+42 i
+42 t
+42 e
+43 e
+line: 49 token: 28  lexeme: write  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 49 token: 28  lexeme: write  flag: 1 root -> x: stmt stack top: stmt
+line: 49 token: 28  lexeme: write  flag: 1 root -> x: ioStmt stack top: ioStmt
+line: 49 token: 28  lexeme: write  flag: 1 root -> x: TK_WRITE stack top: TK_WRITE
+6 (
+line: 49 token: 46  lexeme: (  flag: 1 root -> x: TK_OP stack top: TK_OP
+44 d
+45 4
+50 4
+line: 49 token: 1  lexeme: d4  flag: 1 root -> x: var stack top: var
+line: 49 token: 1  lexeme: d4  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 49 token: 1  lexeme: d4  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 49 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 49 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 49 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+42 p
+42 h
+42 y
+42 s
+42 i
+42 c
+42 s
+43 s
+line: 49 token: 13  lexeme: physics  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+7 )
+line: 49 token: 47  lexeme: )  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 49 token: 47  lexeme: )  flag: 1 root -> x: TK_EPSILON stack top: TK_CL
+line: 49 token: 47  lexeme: )  flag: 1 root -> x: TK_CL stack top: TK_CL
+10 ;
+line: 49 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 w
+42 r
+42 i
+42 t
+42 e
+43 e
+line: 50 token: 28  lexeme: write  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 50 token: 28  lexeme: write  flag: 1 root -> x: stmt stack top: stmt
+line: 50 token: 28  lexeme: write  flag: 1 root -> x: ioStmt stack top: ioStmt
+line: 50 token: 28  lexeme: write  flag: 1 root -> x: TK_WRITE stack top: TK_WRITE
+6 (
+line: 50 token: 46  lexeme: (  flag: 1 root -> x: TK_OP stack top: TK_OP
+44 d
+45 4
+50 4
+line: 50 token: 1  lexeme: d4  flag: 1 root -> x: var stack top: var
+line: 50 token: 1  lexeme: d4  flag: 1 root -> x: singleOrRecId stack top: singleOrRecId
+line: 50 token: 1  lexeme: d4  flag: 1 root -> x: TK_ID stack top: TK_ID
+13 .
+line: 50 token: 44  lexeme: .  flag: 1 root -> x: option_single_constructed stack top: option_single_constructed
+line: 50 token: 44  lexeme: .  flag: 1 root -> x: oneExpansion stack top: oneExpansion
+line: 50 token: 44  lexeme: .  flag: 1 root -> x: TK_DOT stack top: TK_DOT
+44 c
+42 h
+42 e
+42 m
+42 i
+42 s
+42 t
+42 r
+42 y
+43 y
+line: 50 token: 13  lexeme: chemistry  flag: 1 root -> x: TK_FIELDID stack top: TK_FIELDID
+7 )
+line: 50 token: 47  lexeme: )  flag: 1 root -> x: moreExpansions stack top: moreExpansions
+line: 50 token: 47  lexeme: )  flag: 1 root -> x: TK_EPSILON stack top: TK_CL
+line: 50 token: 47  lexeme: )  flag: 1 root -> x: TK_CL stack top: TK_CL
+10 ;
+line: 50 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+63 	
+64 	
+42 r
+42 e
+42 t
+42 u
+42 r
+42 n
+43 n
+line: 51 token: 29  lexeme: return  flag: 1 root -> x: otherStmts stack top: otherStmts
+line: 51 token: 29  lexeme: return  flag: 1 root -> x: TK_EPSILON stack top: returnStmt
+line: 51 token: 29  lexeme: return  flag: 1 root -> x: returnStmt stack top: returnStmt
+line: 51 token: 29  lexeme: return  flag: 1 root -> x: TK_RETURN stack top: TK_RETURN
+10 ;
+line: 51 token: 42  lexeme: ;  flag: 1 root -> x: optionalReturn stack top: optionalReturn
+line: 51 token: 42  lexeme: ;  flag: 1 root -> x: TK_EPSILON stack top: TK_SEM
+line: 51 token: 42  lexeme: ;  flag: 1 root -> x: TK_SEM stack top: TK_SEM
+63 
+
+64 
+
+42 e
+42 n
+42 d
+43 d
+line: 52 token: 3  lexeme: end  flag: 1 root -> x: TK_END stack top: TK_END
+63 
+
+63 
+
+63 
+
+63  
+make: *** [makefile:18: exec] Segmentation fault (core dumped)
+[?2004h]0;shamnesiac@Bob: /mnt/c/Users/aniru/Desktop/CoCoTesting/Group_05_Compiler_Lexer_MOD[01;32mshamnesiac@Bob[00m:[01;34m/mnt/c/Users/aniru/Desktop/CoCoTesting/Group_05_Compiler_Lexer_MOD[00m$ exit
+[?2004lexit
+
+Script done on 2025-03-13 21:03:41+05:30 [COMMAND_EXIT_CODE="2"]
